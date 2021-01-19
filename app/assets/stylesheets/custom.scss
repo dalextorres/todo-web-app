@@ -1,0 +1,40 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$blue: rgb(10, 65, 117);
+
+/* general*/
+
+body {
+    padding-bottom: 70px;
+}
+
+.lg {
+    font-size: 36px;
+}
+
+.md {
+    font-size: 20px;
+}
+
+.sm {
+    font-size: 16px;
+}
+
+.center {
+    text-align: center;
+}
+
+.background-blue {
+    background-color: $blue !important;
+}
+
+.white {
+    color: white !important;
+}
+
+/* nav */
+
+.nav-padding {
+    padding: 6px !important;
+}
