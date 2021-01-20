@@ -1,6 +1,27 @@
-<div class="center home-card">
-    <h1 class="lg home-title"> Welcome to my first solo project </h1>
-    <p class="md home-paragraph"> This to do app is meant to save the world from its most complex problems </p>
-    <%= link_to "Register", '#', class: "btn btn-default btn-lg background-blue white" %>
-</div>
+
+<% if current_user %>
+    <div class="container">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#todo" aria-controls="todo" role="tab" data-toggle="tab">To do</a></li>
+            <li role="presentation"><a href="#completed" aria-controls="completed" role="tab" data-toggle="tab">Completed</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="todo">
+            
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="completed">
+
+            </div>
+        </div>
+    </div>
+<% else %>
+    <div class="center home-card">
+        <h1 class="lg home-title"> Welcome to my first solo project </h1>
+        <p class="md home-paragraph"> This to do app is meant to save the world from its most complex problems </p>
+        <%= link_to "Register", '/signup', class: "btn btn-default btn-lg background-blue white" %>
+    </div>  
+<% end %>
+
+
 

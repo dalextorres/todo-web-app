@@ -13,9 +13,12 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div class="container">
+      <%= render 'shared/flash' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </div>
   </body>
 </html>
 
