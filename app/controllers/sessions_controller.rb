@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
         user = User.find_by(email: params[:session][:email])
         if user && user.authenticate(params[:session][:password])
             session[:user_id] = user.id
-            flash.now[:info] = "Successful login"
+            flash.now[:success] = "Successful login"
             render 'static_pages/home'
         else
             flash.now[:warning] = "Email or password is incorrect"

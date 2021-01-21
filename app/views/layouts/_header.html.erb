@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default background-blue nav-padding">
+<nav class="navbar navbar-default background-white nav-padding border-bottom">
     <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -8,16 +8,23 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand white" href="/">Todo App</a>
+            <a class="navbar-brand links bold" href="/">Todo App</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <% if current_user %>
-                    <li><%= link_to 'Edit', edit_user_path(current_user), class: "white" %></li>
-                    <li><%= link_to 'Log Out', logout_path, method: :delete, class: "white" %></li>
+                    <li class="dropdown links bold">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Profile <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><%= link_to 'Edit', edit_user_path(current_user), class: "links bold" %></li>
+                            <li><%= link_to 'Log Out', logout_path, method: :delete, class: "links bold" %></li>
+                        </ul>
+                    </li>
                 <% else %>
-                    <li><%= link_to 'Login', login_path, class: "white" %></li>
+                    <li><%= link_to 'Login', login_path, class: "links bold" %></li>
                 <% end %>
             </ul>
         </div>
