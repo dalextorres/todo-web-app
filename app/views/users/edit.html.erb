@@ -1,4 +1,4 @@
-<div class="container">
+<div class="std-form">
     <h1 class="center"> Edit </h1>
 
     <%= form_with(model: @user, local: true) do |f| %>
@@ -8,17 +8,16 @@
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>
 
-    <%= f.label :email %>
-    <%= f.email_field :email, class: 'form-control disabledInput', id: 'disabledInput' %>
+    <%= f.label :email, class: "form-input-space" %>
+    <%= f.email_field :email, class: 'form-control', disabled: :disabled %>
 
-    <%= f.label :password %>
+    <%= f.label :password, class: "form-input-space" %>
     <%= f.password_field :password, class: 'form-control' %>
 
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation, class: "form-input-space" %>
     <%= f.password_field :password_confirmation, class: 'form-control' %>
     
-    <%= f.submit "Confirm changes", class: "bttn background-blue white" %> 
+    <%= f.submit "Confirm changes", class: "bttn background-blue white form-input-space" %> 
 
     <% end %>
-
 </div>

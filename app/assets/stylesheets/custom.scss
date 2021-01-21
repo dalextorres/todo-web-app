@@ -54,6 +54,10 @@ body {
     font-weight: bold;
 }
 
+.form-input-space {
+    margin-top: 12px;
+}
+
 /* button */
 
 .bttn-sm {
@@ -92,4 +96,22 @@ body {
 
 .nav-padding {
     padding: 8px !important;
+}
+
+/* form */
+
+.std-form {
+    margin: 0% 15% 0% 15%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+    .std-form {
+        margin: 0% 10% 0% 10%;
+    }
+}
+
+@media only screen and (max-width: 767px) {  
+    .std-form {
+        margin: 0% 8% 0% 8%;
+    }
 }
