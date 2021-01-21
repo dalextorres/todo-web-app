@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
         if user && user.authenticate(params[:session][:password])
             session[:user_id] = user.id
             flash.now[:success] = "Successful login"
-            render 'static_pages/home'
+            redirect_to root_url
         else
             flash.now[:warning] = "Email or password is incorrect"
             render 'sessions/new'

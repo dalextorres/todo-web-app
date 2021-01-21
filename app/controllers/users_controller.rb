@@ -14,7 +14,7 @@ class UsersController < ApplicationController
             flash[:success] = "Success in creating your user"
             redirect_to root_path
         else
-            render 'users/new'
+            render 'new'
         end
     end
 
@@ -45,13 +45,6 @@ class UsersController < ApplicationController
             else
                 flash[:warning] = "You cannot edit another user's information"
                 redirect_to(edit_user_path(current_user))
-            end
-        end
-
-        def logged_in_user
-            unless logged_in?
-                flash[:warning] = "Please log in"
-                redirect_to login_path
             end
         end
 

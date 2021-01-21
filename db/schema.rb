@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_19_191721) do
+ActiveRecord::Schema.define(version: 2021_01_21_222337) do
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "created_at"], name: "index_tasks_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_tasks_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -20,4 +30,5 @@ ActiveRecord::Schema.define(version: 2021_01_19_191721) do
     t.string "password_digest"
   end
 
+  add_foreign_key "tasks", "users"
 end

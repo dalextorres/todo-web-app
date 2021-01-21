@@ -1,0 +1,11 @@
+<%= form_with(model: @task, local: true) do |f| %>
+    <% render 'shared/errors', object: f.object %>
+    
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :content %>
+    <%= f.text_field :content, placeholder: "Write your task here..." %>
+
+    <%= f.submit "Create task", class: "bttn-sm" %>
+<% end %>

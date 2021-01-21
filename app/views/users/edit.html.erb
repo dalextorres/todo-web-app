@@ -1,22 +1,20 @@
 <div class="std-form">
     <h1 class="center"> Edit </h1>
-
     <%= form_with(model: @user, local: true) do |f| %>
 
-    <%= render 'shared/errors', object: f.object %>
+        <%= render 'shared/errors', object: f.object %>
 
-    <h3>Hello <%=f.label @user.username %></h3>
+        <h3>Hello <%=f.label @user.username %></h3>
 
-    <%= f.label :email, class: "form-input-space" %>
-    <%= f.email_field :email, class: 'form-control', disabled: :disabled %>
+        <%= f.label :email, class: "form-input-space" %>
+        <%= f.email_field :email, class: 'form-control', disabled: :disabled %>
 
-    <%= f.label :password, class: "form-input-space" %>
-    <%= f.password_field :password, class: 'form-control' %>
+        <%= f.label :password, class: "form-input-space" %>
+        <%= f.password_field :password, class: 'form-control' %>
 
-    <%= f.label :password_confirmation, class: "form-input-space" %>
-    <%= f.password_field :password_confirmation, class: 'form-control' %>
-    
-    <%= f.submit "Confirm changes", class: "bttn background-blue white form-input-space" %> 
-
+        <%= f.label :password_confirmation, class: "form-input-space" %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+        
+        <%= f.submit "Confirm changes", class: "bttn background-blue white form-input-space" %> 
     <% end %>
 </div>

@@ -1,0 +1,13 @@
+<div class="">
+    <li id="Task-<%= task.id %>">
+        <span class="">
+            <%= task.title %>
+        </span>
+        <span class="">
+            <%= task.content %>
+        </span>
+        <% if current_user?(task.user) %>
+            <%= link_to "delete", task, method: :delete, data: { confirm: "You sure?" } %>
+        <% end %>
+    </li>
+</div>
