@@ -5,8 +5,7 @@
 
     <%= render 'shared/errors', object: f.object %>
 
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+    <h3>Hello <%=f.label @user.username %></h3>
 
     <%= f.label :email, class: "form-input-space" %>
     <%= f.email_field :email, class: 'form-control', disabled: :disabled %>

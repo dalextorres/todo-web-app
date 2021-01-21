@@ -43,7 +43,7 @@ class UsersController < ApplicationController
             if current_user?(@user)
                 return true
             else
-                flash[:warning] = "You cannot edit another users information"
+                flash[:warning] = "You cannot edit another user's information"
                 redirect_to(edit_user_path(current_user))
             end
         end
