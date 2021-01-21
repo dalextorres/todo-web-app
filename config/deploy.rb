@@ -3,6 +3,8 @@ lock "~> 3.15.0"
 
 set :application, "todoapp"
 set :repo_url, "https://github.com/AlexTorres88/todo-web-app.git"
+set :branch, ENV['BRANCH'] if ENV['BRANCH']
+
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
