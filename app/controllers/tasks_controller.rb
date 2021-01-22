@@ -10,6 +10,7 @@ class TasksController < ApplicationController
             redirect_to root_url
         else    
             @feed_items = current_user.feed.paginate(page: params[:page], per_page: 5)
+            flash[:warning] = "Could not create task, remember content limit is 200 characters"
             render 'static_pages/home'
         end
     end
