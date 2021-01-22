@@ -1,17 +1,26 @@
 
 <% if current_user %>
-    <div class="container-fluid">
-        
-        <div class="home-container">
-            <div class="home-form">
-                <h3> Create a Task </h3>
-                <%= render 'shared/task_form' %>
-            </div>
-            <div class="home-tasks">
-                <h3> Current tasks </h3>
-                <%= render 'shared/feed' %>
-            </div>
+    <div class="home-container">
+
         <div>
+            <button type="button" class="bttn-lg background-blue white home-create-bttn" data-toggle="modal" data-target="#myModal">
+                Create Task
+            </button>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content home-modal">
+                        <%= render 'shared/task_form' %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-tasks-container">
+            <h3 class="center"> Current tasks </h3>
+            <%= render 'shared/feed' %>
+        <div>
+
     </div>
 <% else %>
     <div class="center home-card">

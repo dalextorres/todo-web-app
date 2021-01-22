@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.home-container {
+    display: grid;
+}
+
 .home-background {
     background-color: hsl(204, 51%, 75%);
 }
@@ -29,10 +33,16 @@
     margin-right: auto;
 }
 
-.home-container {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: auto;
+.home-tasks-container {
+    margin: 0% 5% 0% 5%;
+}
+
+.home-modal {
+    padding: 20px;
+}
+
+.home-create-bttn {
+    margin-left: 5%;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
@@ -41,10 +51,6 @@
     }
     .home-paragraph {
         width: 400px;
-    }
-    .home-container {
-       grid-template-columns: 100%; 
-       grid-template-rows: 50% 50%;
     }
 }
 
@@ -55,8 +61,4 @@
     .home-paragraph {
         width: 250px;
     }
-    .home-container {
-        grid-template-columns: 100%; 
-        grid-template-rows: 50% 50%;
-     }
 }

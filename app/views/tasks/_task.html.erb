@@ -1,9 +1,9 @@
-<div class="task-style">
-    <li id="Task-<%= task.id %>">
-            <%= task.title %>
-            <p><%= task.content %></p>
+<li id="Task-<%= task.id %>">
+    <div class="task-style">
+        <p><%= task.title %></p>
+        <p><%= task.content %></p>
         <% if current_user?(task.user) %>
             <%= link_to "delete", task, method: :delete, data: { confirm: "You sure?" }, class: "bttn white background-blue" %>
         <% end %>
-    </li>
-</div>
+    </div>
+</li>
