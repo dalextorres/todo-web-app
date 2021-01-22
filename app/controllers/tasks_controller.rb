@@ -9,7 +9,7 @@ class TasksController < ApplicationController
             flash[:success] = "Task created!"
             redirect_to root_url
         else    
-            @feed_items = current_user.feed
+            @feed_items = current_user.feed.paginate(page: params[:page], per_page: 5)
             render 'static_pages/home'
         end
     end

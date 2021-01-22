@@ -27,6 +27,8 @@ gem 'capistrano', '~> 3.11'
 gem 'capistrano-rails', '~> 1.4'
 gem 'capistrano-passenger', '~> 0.2.0'
 gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+gem 'will_paginate', '3.3.0'
+# gem 'bootstrap-will_paginate', '1.0.0'
 
 
 # Use Active Storage variant

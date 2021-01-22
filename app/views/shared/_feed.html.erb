@@ -3,5 +3,8 @@
         <ul class="tasks">
             <%= render @feed_items %> 
         </ul>
+        <div class="digg_pagination">
+            <%= will_paginate @feed_items, params: { controller: :static_pages, action: :home } %>
+        </div>
     </div>
 <% end %>
