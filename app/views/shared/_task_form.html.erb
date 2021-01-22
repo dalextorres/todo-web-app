@@ -2,10 +2,11 @@
     <% render 'shared/errors', object: f.object %>
     
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
 
     <%= f.label :content %>
-    <%= f.text_field :content, placeholder: "Write your task here..." %>
+    <%= f.text_field :content, placeholder: "Write your task here...", class: "text-area form-control" %>
+    
 
-    <%= f.submit "Create task", class: "bttn-sm" %>
+    <%= f.submit "Create task", class: "bttn-sm mg-top" %>
 <% end %>

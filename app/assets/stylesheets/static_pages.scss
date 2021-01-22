@@ -29,12 +29,22 @@
     margin-right: auto;
 }
 
+.home-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
     .home-card {
         margin: 12% 8% 0 8%;
     }
     .home-paragraph {
         width: 400px;
+    }
+    .home-container {
+       grid-template-columns: 100%; 
+       grid-template-rows: 50% 50%;
     }
 }
 
@@ -45,4 +55,8 @@
     .home-paragraph {
         width: 250px;
     }
+    .home-container {
+        grid-template-columns: 100%; 
+        grid-template-rows: 50% 50%;
+     }
 }

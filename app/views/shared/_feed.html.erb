@@ -1,5 +1,7 @@
 <% if @feed_items.any? %> 
-    <ul class="tasks">
-        <%= render @feed_items %> 
-    </ul>
+    <div class="task-container">
+        <ul class="tasks">
+            <%= render @feed_items %> 
+        </ul>
+    </div>
 <% end %>

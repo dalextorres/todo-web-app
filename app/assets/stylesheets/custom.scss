@@ -25,6 +25,10 @@ body {
     text-align: center;
 }
 
+.border-blue {
+    border: 2px $blue solid !important;
+}
+
 .background-blue {
     background-color: $blue !important;
 }
@@ -40,6 +44,10 @@ body {
 .links:hover {
     background-color: rgba(141, 131, 131, 0.1) !important;
     border-radius: 15px;
+}
+
+.black {
+    color: rgb(0, 0, 0) !important;
 }
 
 .white {
@@ -67,7 +75,7 @@ body {
 }
 
 .bttn-sm:hover {
-    background-color: hsla(207, 100%, 24%, 0.7) !important;
+    background-color: hsla(206, 34%, 88%, 0.7) !important;
     text-decoration: none;
     border: 0px solid rgba(112, 108, 108, 0.1);
 }
@@ -79,7 +87,7 @@ body {
 }
 
 .bttn:hover {
-    background-color: hsla(207, 100%, 24%, 0.7) !important;
+    background-color: hsla(206, 34%, 88%, 0.7) !important;
     text-decoration: none;
     border: 0px solid rgba(112, 108, 108, 0.1);
 }
@@ -91,23 +99,38 @@ body {
 }
 
 .bttn-lg:hover {
-    background-color: hsla(207, 100%, 24%, 0.7) !important;
+    background-color: hsla(206, 34%, 88%, 0.7) !important;
     text-decoration: none;
     border: 0px solid rgba(112, 108, 108, 0.1);
 }
 
-.border-bottom {
-    border-bottom: 1px solid rgba(138, 131, 131, 0.1) !important;
+.text-area {
+    height: 100px;
 }
 
-.border-top {
-    border-top: 1px solid rgba(138, 131, 131, 0.1) !important;
+.mg-top {
+    margin-top: 8px;
+}
+
+.home-tasks {
+}
+
+.home-form {
+    height: fit-content;
 }
 
 /* nav */
 
-.nav-padding {
+.nav-top {
     padding: 8px !important;
+    border-bottom: 1px solid rgba(138, 131, 131, 0.1) !important;
+    border-top: 6px solid $blue;
+}
+
+.nav-bottom {
+    padding: 8px !important;
+    border-top: 1px solid rgba(138, 131, 131, 0.1) !important;
+    border-bottom: 6px solid $blue;
 }
 
 /* form */
@@ -120,10 +143,16 @@ body {
     .std-form {
         margin: 0% 14% 0% 14%;
     }
+    .home-tasks {
+        margin-top: auto;
+    }
 }
 
 @media only screen and (max-width: 767px) {  
     .std-form {
         margin: 0% 8% 0% 8%;
+    }
+    .home-tasks {
+        margin-top: auto;
     }
 }
