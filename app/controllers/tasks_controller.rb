@@ -10,7 +10,7 @@ class TasksController < ApplicationController
             redirect_to root_url
         else    
             @feed_items = current_user.feed
-            redirect_to root_url
+            render 'static_pages/home'
         end
     end
 
@@ -27,7 +27,7 @@ class TasksController < ApplicationController
         end
 
         def correct_user
-            @task = current_user.tasks.find_by(params[:id])
+            @task = current_user.tasks.find(params[:id])
             redirect_to root_url if @task.nil?
         end
 
