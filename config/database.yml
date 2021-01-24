@@ -21,18 +21,7 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  # host: <%= ENV['AZURE_DB_HOST'] %>
-  host: "todoapp-postgresdb.postgres.database.azure.com"
-  port: 5432 
-  # database: <%= ENV['AZURE_DB_DATABASE'] %>
-  database: "postgres"
-  # username: <%= ENV['AZURE_DB_USERNAME'] %>
-  username: "pgsqladmin@todoapp-postgresdb"
-  # password: <%= ENV['AZURE_DB_PASSWORD'] %>
-  password: "LSKJDBjkdfbaskjdbn8q73r5"
-
-
-
-
-
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV['DATABASE_URL'] %>
