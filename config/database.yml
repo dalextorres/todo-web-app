@@ -22,4 +22,8 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  host: <%= ENV['AZURE_DB_HOST'] %>
+  port: 5432
+  database: <%= ENV['AZURE_DB_DATABASE'] %>
+  username: <%= ENV['AZURE_DB_USERNAME'] %>
+  password: <%= ENV['AZURE_DB_PASSWORD'] %>
