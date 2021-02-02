@@ -5,12 +5,16 @@
             <p><%= task.title %></p>
         </div>
         <div class="task-notes">
-            <h5> Notes: </h5>
-            <p><%= task.content %></p>
+            <h5 class=""> Notes: </h5>
+            <% if task.content.empty? %>
+                <p>No notes added.</p>
+            <% else %>
+                <p><%= task.content %></p>
+            <% end %>
         </div>
         <div>
             <% if current_user?(task.user) %>
-                <%= link_to "delete", task, method: :delete, data: { confirm: "You sure?" }, class: "bttn white background-blue pull-right" %>
+                <%= link_to "Delete", task, method: :delete, data: { confirm: "You sure?" }, class: "bttn white background-blue pull-right", style:"margin-right: 15px; margin-top: 10px" %>
             <% end %>
         </div>
     </div>
