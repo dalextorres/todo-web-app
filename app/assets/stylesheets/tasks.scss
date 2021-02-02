@@ -22,6 +22,25 @@
     word-wrap: break-word;
 }
 
+.feed-wrapper {
+    display: grid;
+}
+
+.feed-first-block {
+
+}
+
+.feed-second-block {
+
+}
+
+@media screen and (min-width: 1000px) {
+    .feed-wrapper {
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .task-notes {
         width:150px;

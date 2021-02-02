@@ -1,11 +1,16 @@
 <% if @feed_items.any? %> 
-    <h3 class="center"> Current tasks </h3>
-    <div>
-        <ul class="tasks">
-            <%= render @feed_items %> 
-        </ul>
-        <div class="digg_pagination">
-            <%= will_paginate @feed_items, params: { controller: :static_pages, action: :home } %>
+    <div class="feed-wrapper">
+        <div class="feed-first-block">
+            <h3 class="center"> Current tasks </h3>
+            <ul class="tasks">
+                <%= render @feed_items %> 
+            </ul>
+            <div class="digg_pagination">
+                <%= will_paginate @feed_items, params: { controller: :static_pages, action: :home } %>
+            </div>
+        </div>
+        <div class="feed-second-block">
+            <%= image_tag("task_list.svg", :alt => "rss feed", class: "image-responsive center-block home-image") %>
         </div>
     </div>
 <% else %>
