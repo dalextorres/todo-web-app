@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The first step is to clone this git repository to your machine.
 
-Things you may want to cover:
+After that, in the project's root folder run:
 
-* Ruby version
+```bundle install```
 
-* System dependencies
+Now you can see your page running the next command in the terminal: 
 
-* Configuration
+```rails server```
 
-* Database creation
+You might have to run:
 
-* Database initialization
+```rails db:create```
 
-* How to run the test suite
+or 
 
-* Services (job queues, cache servers, search engines, etc.)
+```rails db:migrate```
 
-* Deployment instructions
+before running rails server. 
 
-* ...
