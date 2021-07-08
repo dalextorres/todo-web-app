@@ -1,6 +1,9 @@
 # README
 
-The first step is to clone this git repository to your machine.
+## Setup
+The first step is to clone this git repository to your machine:
+
+```git clone https://github.com/AlexTorres88/todo-web-app.git```
 
 After that, in the project's root folder run:
 
